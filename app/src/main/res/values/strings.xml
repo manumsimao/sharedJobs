@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Shared Jobs</string>
+    <string-array name="tipo_telefone">
+    <item>Telefone Residencial</item>
+        <item>Telefone Comercial</item>
+
+    </string-array>
 </resources>
