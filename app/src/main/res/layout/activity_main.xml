@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10sp"
         tools:context=".MainActivity">
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:ems="10"
-            android:hint="Nome Completo"
+            android:hint="@string/nome_completo"
             android:inputType="textPersonName"
             android:padding="5dp" />
 
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:ems="10"
-            android:hint="e-mail"
+            android:hint="@string/e_mail"
             android:inputType="textEmailAddress"
             android:padding="5dp" />
 
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:ems="10"
-            android:text="Desejo receber e-mails com atualizações sobre oportunidades" />
+            android:text="@string/desejo_receber_atualizacoes" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Telefone"
+                android:hint="@string/telefone"
                 android:inputType="phone" />
         </LinearLayout>
 
@@ -82,7 +82,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="10"
-                android:text="Adicionar celular" />
+                android:text="@string/adicionar_celular" />
 
             <EditText
                 android:id="@+id/celularET"
@@ -90,7 +90,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Celular"
+                android:hint="@string/celular"
                 android:inputType="phone" />
 
         </LinearLayout>
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:labelFor="@id/sexoRG"
-            android:text="Sexo"
+            android:text="@string/sexo"
             android:textColor="@color/black" />
 
         <RadioGroup
@@ -115,7 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Masculino" />
+                android:text="@string/masculino" />
 
             <RadioButton
                 android:id="@+id/femininoRB"
@@ -123,10 +123,123 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
-                android:text="Feminino" />
+                android:text="@string/feminino" />
 
         </RadioGroup>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/data_de_nascimento"
+            android:textColor="@color/black" />
 
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:spinnersShown="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/formacao"
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:entries="@array/formacao" />
+
+        <LinearLayout
+            android:id="@+id/perguntasFundEMedLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/fundEMedioAnoFormaturaET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ano_de_formatura"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/perguntasSuperiorLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/superiorConclusaoaET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ano_de_conclusao"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/superiorInstituicaoET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/instituicao" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/perguntasMestEDoutLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/mestEDoutTituloET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/titulo_da_monografia" />
+
+            <EditText
+                android:id="@+id/mestEDoutOrientadorET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/orientador" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/vagas_de_interesse"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/vagasET"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:id="@+id/limparBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/limpar"
+            app:backgroundTint="@color/red" />
+
+        <Button
+            android:id="@+id/salvarBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/salvar"
+            app:backgroundTint="@color/green" />
     </LinearLayout>
 </ScrollView>
