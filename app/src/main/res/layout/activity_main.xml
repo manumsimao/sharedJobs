@@ -91,7 +91,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/celular"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -135,6 +136,7 @@
             android:textColor="@color/black" />
 
         <DatePicker
+            android:id="@+id/dataNascDP"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:calendarViewShown="false"
@@ -149,6 +151,7 @@
             android:textColor="@color/black" />
 
         <Spinner
+            android:id="@+id/formacaoSP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -232,6 +235,7 @@
             android:id="@+id/limparBTN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onClickButton"
             android:text="@string/limpar"
             app:backgroundTint="@color/red" />
 
@@ -239,6 +243,7 @@
             android:id="@+id/salvarBTN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onClickButton"
             android:text="@string/salvar"
             app:backgroundTint="@color/green" />
     </LinearLayout>
