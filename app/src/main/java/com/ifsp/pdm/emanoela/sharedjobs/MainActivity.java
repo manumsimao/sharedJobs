@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(activityMainBinding.getRoot());
 
-
         activityMainBinding.celularCB.setOnClickListener(v -> {
             if (((CompoundButton) v).isChecked()) {
                 activityMainBinding.celularET.setVisibility(View.VISIBLE);
@@ -162,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
             default:
                 break;
         }
+        
         sumarioSB.append("\n");
         sumarioSB.append("Vagas de interesse: ").append(activityMainBinding.vagasET.getText().toString());
 
